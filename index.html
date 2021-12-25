@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 7</title>
+    <style>
+        body{
+            color: black;
+            background-color: wheat;
+        }
+
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+
+        h2{
+            color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;" >
+        <label for="" style="margin-top: 15px;">Pilih Provinsi :</label>
+        <select name="provinsi" id="prov" onclick="kota()" class="btn btn-outline-success">
+            <option selected>Pilih Provinsi</option>
+            <option value="Aceh">Aceh</option>
+            <option value="Jawa Barat">Jawa Barat</option>
+            <option value="Kalimantan Timur">Kalimantan Timur</option>
+            <option value="Sulawesi Utara">Sulawesi Utara</option>
+            <option value="Papua">Papua</option>
+        </select>
+        <br><br>
+    
+        <label for="">Pilih Kota :</label>
+        <select name="kota" onchange="text()" id="kota" class="btn btn-outline-success">
+            <option selected>Pilih Kota</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        <br><br>
+    
+        <h2 id="txt"></h2>
+        <br><br>
+        <button onclick="darkmode()" id="darkmode" class="btn btn-info">Dark Mode is Off</button>
+    </div>
+</body>
+<script>
+    function kota(){
+        var prov = document.getElementById('prov');
+        var select = document.getElementsByTagName('select');
+    
+        if(prov.value == 'Aceh'){
+            select[1].getElementsByTagName('option')[1].innerHTML = 'Sabang';
+            select[1].getElementsByTagName('option')[1].value = 'Sabang';
+            select[1].getElementsByTagName('option')[2].innerHTML = 'Banda Aceh';
+            select[1].getElementsByTagName('option')[2].value = 'Banda Aceh';
+            select[1].getElementsByTagName('option')[3].innerHTML = 'Langsa';
+            select[1].getElementsByTagName('option')[3].value = 'Langsa';
+            select[1].getElementsByTagName('option')[4].innerHTML = 'Lhokseumawe';
+            select[1].getElementsByTagName('option')[4].value = 'Lhokseumawe';
+            select[1].getElementsByTagName('option')[5].innerHTML = 'Subulussalam';
+            select[1].getElementsByTagName('option')[5].value = 'Subulussalam';
+        }
+        else if(prov.value == 'Jawa Barat'){
+            select[1].getElementsByTagName('option')[1].innerHTML = 'Bogor';
+            select[1].getElementsByTagName('option')[1].value = 'Bogor';
+            select[1].getElementsByTagName('option')[2].innerHTML = 'Depok';
+            select[1].getElementsByTagName('option')[2].value = 'Depok';
+            select[1].getElementsByTagName('option')[3].innerHTML = 'Bandung';
+            select[1].getElementsByTagName('option')[3].value = 'Bandung';
+            select[1].getElementsByTagName('option')[4].innerHTML = 'Sukabumi';
+            select[1].getElementsByTagName('option')[4].value = 'Sukabumi';
+            select[1].getElementsByTagName('option')[5].innerHTML = 'Tasikmalaya';
+            select[1].getElementsByTagName('option')[5].value = 'Tasikmalaya';
+        }
+        else if(prov.value == 'Kalimantan Timur'){
+            select[1].getElementsByTagName('option')[1].innerHTML = 'Bontang';
+            select[1].getElementsByTagName('option')[1].value = 'Bontang';
+            select[1].getElementsByTagName('option')[2].innerHTML = 'Balikpapan';
+            select[1].getElementsByTagName('option')[2].value = 'Balikpapan';
+            select[1].getElementsByTagName('option')[3].innerHTML = 'Samarinda';
+            select[1].getElementsByTagName('option')[3].value = 'Samarinda';
+            select[1].getElementsByTagName('option')[4].innerHTML = 'Berau';
+            select[1].getElementsByTagName('option')[4].value = 'Berau';
+            select[1].getElementsByTagName('option')[5].innerHTML = 'Paser';
+            select[1].getElementsByTagName('option')[5].value = 'Paser';
+        }
+        else if(prov.value == 'Sulawesi Utara'){
+            select[1].getElementsByTagName('option')[1].innerHTML = 'Bitung';
+            select[1].getElementsByTagName('option')[1].value = 'Bitung';
+            select[1].getElementsByTagName('option')[2].innerHTML = 'Kotamobagu';
+            select[1].getElementsByTagName('option')[2].value = 'Kotamobagu';
+            select[1].getElementsByTagName('option')[3].innerHTML = 'Manado';
+            select[1].getElementsByTagName('option')[3].value = 'Manado';
+            select[1].getElementsByTagName('option')[4].innerHTML = 'Tomohon';
+            select[1].getElementsByTagName('option')[4].value = 'Tomohon';
+            select[1].getElementsByTagName('option')[5].innerHTML = 'Minahasa';
+            select[1].getElementsByTagName('option')[5].value = 'Minahasa';
+        }
+        else if(prov.value == 'Papua'){
+            select[1].getElementsByTagName('option')[1].innerHTML = 'Jayapura';
+            select[1].getElementsByTagName('option')[1].value = 'Jayapura';
+            select[1].getElementsByTagName('option')[2].innerHTML = 'Asmat';
+            select[1].getElementsByTagName('option')[2].value = 'Asmat';
+            select[1].getElementsByTagName('option')[3].innerHTML = 'Deiyai';
+            select[1].getElementsByTagName('option')[3].value = 'Deiyai';
+            select[1].getElementsByTagName('option')[4].innerHTML = 'Merauke';
+            select[1].getElementsByTagName('option')[4].value = 'Merauke';
+            select[1].getElementsByTagName('option')[5].innerHTML = 'Yahukimo';
+            select[1].getElementsByTagName('option')[5].value = 'Yahukimo';
+        }
+        else{
+            select[1].getElementsByTagName('option')[1].innerHTML = '';
+            select[1].getElementsByTagName('option')[1].value = '';
+            select[1].getElementsByTagName('option')[2].innerHTML = '';
+            select[1].getElementsByTagName('option')[2].value = '';
+            select[1].getElementsByTagName('option')[3].innerHTML = '';
+            select[1].getElementsByTagName('option')[3].value = '';
+            select[1].getElementsByTagName('option')[4].innerHTML = '';
+            select[1].getElementsByTagName('option')[4].value = '';
+            select[1].getElementsByTagName('option')[5].innerHTML = '';
+            select[1].getElementsByTagName('option')[5].value = '';
+        }
+    }
+
+    function text(){
+        var teks = document.getElementById('txt');
+        var prov = document.getElementById('prov');
+        var kota = document.getElementById('kota');
+
+        teks.innerHTML = "Pada provinsi " + prov.value + " ada kota " + kota.value + "<br>";
+        
+    }
+
+    function darkmode(){
+        var body = document.body;
+        var content = document.getElementById('darkmode');
+
+        if(body.classList == 'dark-mode'){
+            content.innerHTML = 'Dark Mode is Off';
+            body.classList = 'body';
+        }
+        else{
+            content.innerHTML = 'Dark Mode is On';
+            body.classList = 'dark-mode';
+        }
+    }
+
+</script>
+</html>
